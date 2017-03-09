@@ -24,10 +24,12 @@ import (
 	"github.com/intelsdi-x/snap/control/plugin"
 	// Import our collector plugin implementation
 	"github.com/intelsdi-x/snap-plugin-collector-psutil/psutil"
+	"fmt"
 )
 
 // plugin bootstrap
 func main() {
+	fmt.Println("starting plugin")
 	plugin.Start(
 		psutil.Meta(),
 		psutil.NewPsutilCollector(), // CollectorPlugin interface
